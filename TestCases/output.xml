@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220918 13:03:59.745" rpa="false" schemaversion="3">
+<suite id="s1" name="E2Etest" source="C:\Users\janbo\PycharmProjects\EndToEndWithRobotF\TestCases\e2etest.robot">
+<kw name="open my browser" library="utilities" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>${timeout}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${timeout}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220918 13:04:00.200" endtime="20220918 13:04:00.200"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220918 13:04:00.200" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/angularpractice/'.</msg>
+<status status="PASS" starttime="20220918 13:04:00.200" endtime="20220918 13:04:03.939"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220918 13:04:03.939" endtime="20220918 13:04:04.075"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:00.200" endtime="20220918 13:04:04.075"/>
+</kw>
+<test id="s1-t1" name="Registration Page Test" line="27">
+<kw name="enter my name" library="regPageKeywords">
+<arg>${name}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_nameField}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:04.075" level="INFO">Typing text 'Tagaz Tager' into text field 'name: name'.</msg>
+<status status="PASS" starttime="20220918 13:04:04.075" endtime="20220918 13:04:04.312"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.075" endtime="20220918 13:04:04.313"/>
+</kw>
+<kw name="enter my email" library="regPageKeywords">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_emailField}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:04.319" level="INFO">Typing text 'tager@tagaz.cars' into text field 'name: email'.</msg>
+<status status="PASS" starttime="20220918 13:04:04.318" endtime="20220918 13:04:04.580"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.315" endtime="20220918 13:04:04.580"/>
+</kw>
+<kw name="enter my password" library="regPageKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_passwordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:04.582" level="INFO">Typing text 'same_as_korando' into text field 'id: exampleInputPassword1'.</msg>
+<status status="PASS" starttime="20220918 13:04:04.582" endtime="20220918 13:04:04.708"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.581" endtime="20220918 13:04:04.709"/>
+</kw>
+<kw name="select ice cream checkbox" library="regPageKeywords">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${checkbox_icecreamcheckbox}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:04.713" level="INFO">Selecting checkbox 'id: exampleCheck1'.</msg>
+<status status="PASS" starttime="20220918 13:04:04.712" endtime="20220918 13:04:04.807"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.711" endtime="20220918 13:04:04.807"/>
+</kw>
+<kw name="select my gender" library="regPageKeywords">
+<arg>${gender}</arg>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${drpdown_genderdropdown}</arg>
+<arg>${gender}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220918 13:04:04.808" level="INFO">Selecting options from selection list 'id: exampleFormControlSelect1' by label Male.</msg>
+<status status="PASS" starttime="20220918 13:04:04.808" endtime="20220918 13:04:04.874"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.807" endtime="20220918 13:04:04.874"/>
+</kw>
+<kw name="enter my bday" library="regPageKeywords">
+<arg>${bday}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_bday}</arg>
+<arg>${bday}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:04.878" level="INFO">Typing text '01012008' into text field 'name: bday'.</msg>
+<status status="PASS" starttime="20220918 13:04:04.877" endtime="20220918 13:04:05.009"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.875" endtime="20220918 13:04:05.012"/>
+</kw>
+<kw name="hit the submit button" library="regPageKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_submitbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:05.016" level="INFO">Clicking element 'xpath: //input[@class = "btn btn-success"]'.</msg>
+<status status="PASS" starttime="20220918 13:04:05.015" endtime="20220918 13:04:05.136"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:05.014" endtime="20220918 13:04:05.136"/>
+</kw>
+<kw name="check if success mesage present" library="regPageKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Success!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220918 13:04:05.189" level="INFO">Current page contains text 'Success!'.</msg>
+<status status="PASS" starttime="20220918 13:04:05.138" endtime="20220918 13:04:05.189"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:05.137" endtime="20220918 13:04:05.190"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_shopButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:05.194" level="INFO">Clicking element 'xpath: //a[@href='/angularpractice/shop']'.</msg>
+<status status="PASS" starttime="20220918 13:04:05.191" endtime="20220918 13:04:06.141"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:04.075" endtime="20220918 13:04:06.143"/>
+</test>
+<test id="s1-t2" name="Shop Page Test" line="39">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${shop_page_shop_name}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220918 13:04:06.214" level="INFO">Element 'xpath: //h1[text()='Shop Name']' is displayed.</msg>
+<status status="PASS" starttime="20220918 13:04:06.154" endtime="20220918 13:04:06.214"/>
+</kw>
+<kw name="find products from shopping list" library="shopPageKeywords">
+<arg>@{shopping_list}</arg>
+<for flavor="IN">
+<var>${item}</var>
+<value>@{list}</value>
+<iter>
+<var name="${item}">iphone X</var>
+<kw name="find item cart button" library="shopPageKeywords">
+<arg>${item}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath: //a[text()='${product_name}']/parent::h4/parent::div/parent::div/div[@class='card-footer']/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.217" level="INFO">Clicking element 'xpath: //a[text()='iphone X']/parent::h4/parent::div/parent::div/div[@class='card-footer']/button'.</msg>
+<status status="PASS" starttime="20220918 13:04:06.217" endtime="20220918 13:04:06.386"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.216" endtime="20220918 13:04:06.386"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.216" endtime="20220918 13:04:06.386"/>
+</iter>
+<iter>
+<var name="${item}">Blackberry</var>
+<kw name="find item cart button" library="shopPageKeywords">
+<arg>${item}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath: //a[text()='${product_name}']/parent::h4/parent::div/parent::div/div[@class='card-footer']/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.387" level="INFO">Clicking element 'xpath: //a[text()='Blackberry']/parent::h4/parent::div/parent::div/div[@class='card-footer']/button'.</msg>
+<status status="PASS" starttime="20220918 13:04:06.387" endtime="20220918 13:04:06.487"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.386" endtime="20220918 13:04:06.487"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.386" endtime="20220918 13:04:06.487"/>
+</iter>
+<status status="PASS" starttime="20220918 13:04:06.215" endtime="20220918 13:04:06.487"/>
+</for>
+<status status="PASS" starttime="20220918 13:04:06.215" endtime="20220918 13:04:06.487"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${checkout_button}</arg>
+<arg>2</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220918 13:04:06.519" level="INFO">Element 'xpath: //a[@class = 'nav-link btn btn-primary']' contains text '2'.</msg>
+<status status="PASS" starttime="20220918 13:04:06.488" endtime="20220918 13:04:06.519"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkout_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.520" level="INFO">Clicking element 'xpath: //a[@class = 'nav-link btn btn-primary']'.</msg>
+<status status="PASS" starttime="20220918 13:04:06.519" endtime="20220918 13:04:06.589"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.145" endtime="20220918 13:04:06.589"/>
+</test>
+<test id="s1-t3" name="Checkout Page Test" line="46">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${table_head}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220918 13:04:06.625" level="INFO">Element 'xpath: //table[@class='table table-hover']' is displayed.</msg>
+<status status="PASS" starttime="20220918 13:04:06.592" endtime="20220918 13:04:06.626"/>
+</kw>
+<kw name="table should be big enough" library="checkoutPageKeywords">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${ROWS}</var>
+<arg>xpath: //table[@class='table table-hover']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.636" level="INFO">${ROWS} = 4</msg>
+<status status="PASS" starttime="20220918 13:04:06.627" endtime="20220918 13:04:06.636"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ROWS}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220918 13:04:06.636" level="INFO">${ROWS} = 4</msg>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.636"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${expected_length}</var>
+<arg>${shopping_list}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220918 13:04:06.636" level="INFO">Length is 2</msg>
+<msg timestamp="20220918 13:04:06.636" level="INFO">${expected_length} = 2</msg>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.636"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${ROWS-2}</arg>
+<arg>${expected_length}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.636"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.627" endtime="20220918 13:04:06.636"/>
+</kw>
+<kw name="prices should add up" library="checkoutPageKeywords">
+<for flavor="IN RANGE">
+<var>${tr_index}</var>
+<value>1</value>
+<value>${ROWS-1}</value>
+<iter>
+<var name="${tr_index}">1</var>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[2]/input[@id='exampleInputEmail1']</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.667" level="INFO">${quantity} = 1</msg>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.667"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[3]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.695" level="INFO">${price} = ₹. 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.667" endtime="20220918 13:04:06.695"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${price}</var>
+<arg>${price}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.696" level="INFO">${price} = ['₹.', '100000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.695" endtime="20220918 13:04:06.696"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.696" level="INFO">${price} = 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.696" endtime="20220918 13:04:06.696"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[4]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.723" level="INFO">${total} = ₹. 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.696" endtime="20220918 13:04:06.723"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${total}</var>
+<arg>${total}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.723" level="INFO">${total} = ['₹.', '100000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.723" endtime="20220918 13:04:06.723"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${total}</var>
+<arg>${total}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.724" level="INFO">${total} = 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.724" endtime="20220918 13:04:06.724"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${quantity} * ${price}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220918 13:04:06.724" level="INFO">${sum} = 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.724" endtime="20220918 13:04:06.724"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${sum}</arg>
+<arg>${total}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20220918 13:04:06.725" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220918 13:04:06.724" endtime="20220918 13:04:06.725"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.725"/>
+</iter>
+<iter>
+<var name="${tr_index}">2</var>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${quantity}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[2]/input[@id='exampleInputEmail1']</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.736" level="INFO">${quantity} = 1</msg>
+<status status="PASS" starttime="20220918 13:04:06.725" endtime="20220918 13:04:06.736"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[3]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.767" level="INFO">${price} = ₹. 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.736" endtime="20220918 13:04:06.767"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${price}</var>
+<arg>${price}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.767" level="INFO">${price} = ['₹.', '50000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.767" endtime="20220918 13:04:06.767"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${price}</var>
+<arg>${price}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.767" level="INFO">${price} = 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.767" endtime="20220918 13:04:06.767"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[4]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.783" level="INFO">${total} = ₹. 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.767" endtime="20220918 13:04:06.783"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${total}</var>
+<arg>${total}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.799" level="INFO">${total} = ['₹.', '50000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.799"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${total}</var>
+<arg>${total}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.799" level="INFO">${total} = 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.799"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${quantity} * ${price}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220918 13:04:06.799" level="INFO">${sum} = 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.799"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${sum}</arg>
+<arg>${total}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20220918 13:04:06.799" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.799"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.725" endtime="20220918 13:04:06.799"/>
+</iter>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.799"/>
+</for>
+<status status="PASS" starttime="20220918 13:04:06.636" endtime="20220918 13:04:06.799"/>
+</kw>
+<kw name="grand total should add up" library="checkoutPageKeywords">
+<kw name="Set Variable" library="BuiltIn">
+<var>${sum}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.799" level="INFO">${sum} = 0</msg>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.799"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${grand_total}</var>
+<arg>xpath: //tbody/tr[3]/td[5]/h3/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.827" level="INFO">${grand_total} = ₹. 150000</msg>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.827"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${grand_total}</var>
+<arg>${grand_total}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.827" level="INFO">${grand_total} = ['₹.', '150000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.827" endtime="20220918 13:04:06.827"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${grand_total}</var>
+<arg>${grand_total}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.828" level="INFO">${grand_total} = 150000</msg>
+<status status="PASS" starttime="20220918 13:04:06.827" endtime="20220918 13:04:06.828"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${tr_index}</var>
+<value>1</value>
+<value>${ROWS-1}</value>
+<iter>
+<var name="${tr_index}">1</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[4]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.843" level="INFO">${total} = ₹. 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.829" endtime="20220918 13:04:06.843"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${total}</var>
+<arg>${total}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.843" level="INFO">${total} = ['₹.', '100000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.843" endtime="20220918 13:04:06.843"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${total}</var>
+<arg>${total}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.843" level="INFO">${total} = 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.843" endtime="20220918 13:04:06.843"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum} + ${total}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220918 13:04:06.843" level="INFO">${sum} = 100000</msg>
+<status status="PASS" starttime="20220918 13:04:06.843" endtime="20220918 13:04:06.843"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.829" endtime="20220918 13:04:06.843"/>
+</iter>
+<iter>
+<var name="${tr_index}">2</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total}</var>
+<arg>xpath: //tbody/tr[${tr_index}]/td[4]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.858" level="INFO">${total} = ₹. 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.843" endtime="20220918 13:04:06.858"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${total}</var>
+<arg>${total}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20220918 13:04:06.858" level="INFO">${total} = ['₹.', '50000']</msg>
+<status status="PASS" starttime="20220918 13:04:06.858" endtime="20220918 13:04:06.858"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${total}</var>
+<arg>${total}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:06.858" level="INFO">${total} = 50000</msg>
+<status status="PASS" starttime="20220918 13:04:06.858" endtime="20220918 13:04:06.858"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${sum}</var>
+<arg>${sum} + ${total}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220918 13:04:06.858" level="INFO">${sum} = 150000</msg>
+<status status="PASS" starttime="20220918 13:04:06.858" endtime="20220918 13:04:06.858"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.843" endtime="20220918 13:04:06.858"/>
+</iter>
+<status status="PASS" starttime="20220918 13:04:06.828" endtime="20220918 13:04:06.858"/>
+</for>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${sum}</arg>
+<arg>${grand_total}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20220918 13:04:06.858" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20220918 13:04:06.858" endtime="20220918 13:04:06.858"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.799" endtime="20220918 13:04:06.858"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.858" level="INFO">Clicking element 'xpath: //button[@class='btn btn-success']'.</msg>
+<status status="PASS" starttime="20220918 13:04:06.858" endtime="20220918 13:04:06.938"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${country_dropdown}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220918 13:04:06.971" level="INFO">Element 'id: country' is displayed.</msg>
+<status status="PASS" starttime="20220918 13:04:06.938" endtime="20220918 13:04:06.971"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.591" endtime="20220918 13:04:06.972"/>
+</test>
+<test id="s1-t4" name="Confirm Page Test" line="54">
+<kw name="select country" library="confirmPageKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${country_dropdown}</arg>
+<arg>${country}[0:3]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:06.976" level="INFO">Typing text 'Slo' into text field 'id: country'.</msg>
+<status status="PASS" starttime="20220918 13:04:06.975" endtime="20220918 13:04:07.130"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${country_option}</var>
+<arg>xpath: //a[text()='${country}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220918 13:04:07.131" level="INFO">${country_option} = xpath: //a[text()='Slovakia']</msg>
+<status status="PASS" starttime="20220918 13:04:07.130" endtime="20220918 13:04:07.131"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${country_option}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220918 13:04:07.131" endtime="20220918 13:04:12.329"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${country_option}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:12.329" level="INFO">Clicking element 'xpath: //a[text()='Slovakia']'.</msg>
+<status status="PASS" starttime="20220918 13:04:12.329" endtime="20220918 13:04:12.384"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.974" endtime="20220918 13:04:12.384"/>
+</kw>
+<kw name="agree with terms" library="confirmPageKeywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>'arguments[0].click();'</arg>
+<arg>ARGUMENTS</arg>
+<arg>${terms_checkbox}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220918 13:04:12.387" level="INFO">Executing JavaScript:
+'arguments[0].click();'
+By using argument:
+'id: checkbox2'</msg>
+<status status="PASS" starttime="20220918 13:04:12.386" endtime="20220918 13:04:12.394"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220918 13:04:15.403" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220918 13:04:12.395" endtime="20220918 13:04:15.403"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:12.385" endtime="20220918 13:04:15.403"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${purchase_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220918 13:04:15.405" level="INFO">Clicking element 'xpath: //input[@class='btn btn-success btn-lg']'.</msg>
+<status status="PASS" starttime="20220918 13:04:15.405" endtime="20220918 13:04:15.469"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>success</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220918 13:04:15.494" level="INFO">Current page contains text 'success'.</msg>
+<status status="PASS" starttime="20220918 13:04:15.471" endtime="20220918 13:04:15.494"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:06.973" endtime="20220918 13:04:15.495"/>
+</test>
+<kw name="close my browser" library="utilities" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220918 13:04:15.497" endtime="20220918 13:04:17.792"/>
+</kw>
+<status status="PASS" starttime="20220918 13:04:15.497" endtime="20220918 13:04:17.792"/>
+</kw>
+<status status="PASS" starttime="20220918 13:03:59.752" endtime="20220918 13:04:17.792"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="E2Etest">E2Etest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

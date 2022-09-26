@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220901 10:47:41.509" rpa="false" schemaversion="3">
+<suite id="s1" name="shopPageKeywords" source="C:\Users\janbo\PycharmProjects\EndToEndWithRobotF\resources\shopPageKeywords.robot">
+<test id="s1-t1" name="TC" line="6">
+<kw name="find items from shopping list">
+<arg>Blackberry</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/angularpractice/shop</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220901 10:47:41.856" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/angularpractice/shop'.</msg>
+<status status="PASS" starttime="20220901 10:47:41.856" endtime="20220901 10:47:46.675"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath: //a[text()='${product_name}']/parent::h4/parent::div[1]/div[@class='card-footer']/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:47:46.676" level="INFO">Clicking element 'xpath: //a[text()='Blackberry']/parent::h4/parent::div[1]/div[@class='card-footer']/button'.</msg>
+<msg timestamp="20220901 10:47:47.020" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220901 10:47:47.021" level="FAIL">Element with locator 'xpath: //a[text()='Blackberry']/parent::h4/parent::div[1]/div[@class='card-footer']/button' not found.</msg>
+<status status="FAIL" starttime="20220901 10:47:46.675" endtime="20220901 10:47:47.023"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220901 10:47:47.023" endtime="20220901 10:47:47.023"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20220901 10:47:47.023" endtime="20220901 10:47:47.023"/>
+</kw>
+<status status="FAIL" starttime="20220901 10:47:41.855" endtime="20220901 10:47:47.024"/>
+</kw>
+<status status="FAIL" starttime="20220901 10:47:41.854" endtime="20220901 10:47:47.026">Element with locator 'xpath: //a[text()='Blackberry']/parent::h4/parent::div[1]/div[@class='card-footer']/button' not found.</status>
+</test>
+<status status="FAIL" starttime="20220901 10:47:41.511" endtime="20220901 10:47:47.028"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="shopPageKeywords">shopPageKeywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
